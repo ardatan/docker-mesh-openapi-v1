@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@graphql-mesh/compose-cli": "latest",
+    "@graphql-mesh/cross-helpers": "latest",
+    "@omnigraph/openapi": "latest",
+    "graphql": "latest"
+  },
+  "type": "module",
+  "scripts": {
+    "compose": "mesh-compose > supergraph.graphql",
+    "build": "docker build -t hive-gateway-w-rest .",
+    "start": "docker run -p 4000:4000 -v \"./supergraph.graphql:/gateway/supergraph.graphql\" hive-gateway-w-rest supergraph"
+  }
+}

@@ -1,0 +1,13 @@
+services:
+  hive-gateway:
+    image: ghcr.io/graphql-hive/gateway
+    command: supergraph
+    ports:
+      - '4000:4000'
+    # Add Hive Registry environment variables in case you use it
+    # environment:
+    #   HIVE_CDN_ENDPOINT: <secret>
+    #   HIVE_CDN_KEY: <secret>
+    #   HIVE_REGISTRY_TOKEN: <secret>
+    volumes:
+      - ./gateway.config.ts:/gateway/gateway.config.ts
