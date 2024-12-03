@@ -10,4 +10,4 @@ services:
     #   HIVE_CDN_KEY: <secret>
     #   HIVE_REGISTRY_TOKEN: <secret>
     volumes:
-      - ./gateway.config.ts:/gateway/gateway.config.ts
+      - ./supergraph.graphql:/gateway/supergraph.graphql

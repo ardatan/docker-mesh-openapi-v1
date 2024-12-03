@@ -78,7 +78,7 @@ schema
 
 
 enum join__Graph {
-  PETSTORE @join__graph(name: "petstore", url: "/api/v3") 
+  PETSTORE @join__graph(name: "petstore", url: "https://petstore3.swagger.io/api/v3") 
 }
 
 directive @enum(subgraph: String, value: String)  repeatable on ENUM_VALUE
@@ -148,7 +148,7 @@ scalar ObjMap @join__type(graph: PETSTORE)
 scalar _DirectiveExtensions @join__type(graph: PETSTORE) 
 
 type Query @extraSchemaDefinitionDirective(
-  directives: {transport: [{subgraph: "petstore", kind: "rest", location: "/api/v3"}]}
+  directives: {transport: [{subgraph: "petstore", kind: "rest", location: "https://petstore3.swagger.io/api/v3"}]}
 ) @join__type(graph: PETSTORE)  {
   """
   Multiple status values can be provided with comma separated strings
